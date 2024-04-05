@@ -4,10 +4,13 @@ function getClock() {
     const date = new Date()
     const hours = String(date.getHours()).padStart(2, "0");
     const minutes = String(date.getMinutes()).padStart(2, "0");
-    const seconds = String(date.getSeconds()).padStart(2, "0");
-
-    clock.innerText = `${hours}:${minutes}:${seconds}`;
+    const ampm = date.getHours();
+    
+    if (ampm >= 12) {
+        clock.innerText = `${hours - 12} : ${minutes} PM`;
+    } else {
+        clock.innerText = `${hours - 12} : ${minutes} AM`;
+    }
 }
 
 getClock(); // getClock 즉시 실행
-setInterval(getClock, 1000); // 매 초마다 getClock 다시 실행
