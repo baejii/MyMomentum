@@ -9,7 +9,7 @@ function getClock() {
     if (ampm >= 12) {
         clock.innerText = `${hours - 12} : ${minutes} PM`;
     } else {
-        clock.innerText = `${hours - 12} : ${minutes} AM`;
+        clock.innerText = Math.abs(hours - 12) + ` : ${minutes} AM`;
     }
 }
 
