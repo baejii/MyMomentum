@@ -1,19 +1,19 @@
-const images = [
-    "0.jpeg",
-    "1.jpeg",
-    "2.jpeg",
-    "3.jpeg",
-    "4.jpeg",
-    "5.jpeg",
-    "6.jpeg",
-    "7.jpeg",
-    "8.jpeg",
-    "9.jpeg"
-];
+const body = document.body;
 
-const chosenImage = images[Math.floor(Math.random() * quotes.length)];
+const dayImages = ["0.jpg", "1.jpg", "2.jpg", "3.jpg"];
+const sunsetImages = ["4.jpg", "5.jpg", "6.jpg", "7.jpg"];
+const nightImages = ["8.jpg", "9.jpg", "10.jpg", "11.jpg"];
 
-const bgImage = document.createElement("img"); // body에 <img> 생성
+const today = new Date();
+const hours = today.getHours();
 
-bgImage.src = `img/${chosenImage}`; // 생성한 img 태그 안 src 속성에 랜덤한 사진이 들어갈 수 있도록 해줌
-document.body.appendChild(bgImage); // appendChild(): body에 html을 추가
+if (hours < 6 || hours >= 20) {
+    const nightRandomImage = nightImages[Math.floor(Math.random() * nightImages.length)];
+    body.style.backgroundImage = `url("img/${nightRandomImage}")`;
+} else if (hours < 20 && hours >= 18) {
+    const sunsetRandomImage = sunsetImages[Math.floor(Math.random() * sunsetImages.length)];
+    body.style.backgroundImage = `url("img/${sunsetRandomImage}")`;
+} else if (hours < 18 && hours >= 6) {
+    const dayRandomImage = dayImages[Math.floor(Math.random() * dayImages.length)];
+    body.style.backgroundImage = `url("img/${dayRandomImage}")`;
+}
