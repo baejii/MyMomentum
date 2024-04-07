@@ -7,37 +7,43 @@
         <title>Momentum App</title>
     </head>
     <body>
-        <form id="search">
-            <input type="text" value="" maxlength="200" placeholder="Search in Google" />
-            <button type="submit" value="">Search</button>
-        </form>
-        <div id="weather">
-            <span></span>
-            <span></span>
+        <div class="top">
+            <form id="search">
+                <input type="text" value="" maxlength="200" placeholder="Search in Google" />
+                <button type="submit" value="">Search</button>
+            </form>
+            <div id="weather">
+                <span></span>
+                <span></span>
+            </div>
         </div>
-        <h4 id="date"></h4>
-        <h2 id="clock">00:00</h2>
-        <form class="hidden" id="login-form">
-            <input
-                required 
-                maxlength="15" 
-                type="text" 
-                placeholder="What is your name?" 
-            />
-            <input type="submit" value="Log In" />
-        </form>
-        <h1 class="hidden" id="greeting"></h1>
-        <form id="todo-form">
-            <input required type="text" placeholder="Write a To Do and Press Enter" />
-        </form>
-        <ul id="todo-list"></ul>
-        <div id="quote">
-            <span></span>
-            <span></span>
+        <div class="middle">
+            <h4 id="date"></h4>
+            <h2 id="clock">00:00</h2>
+            <form class="hidden" id="login-form">
+                <input
+                    required 
+                    maxlength="15" 
+                    type="text" 
+                    placeholder="What is your name?" 
+                />
+                <input type="submit" value="Enter" />
+            </form>
+            <h1 class="hidden" id="greeting"></h1>
+            <form id="todo-form">
+                <input required type="text" placeholder="Write a To Do and Press Enter" />
+            </form>
+            <ul id="todo-list"></ul>
         </div>
-        <div id="music">
-            <div id="music-name"></div>
-            <audio id="music-play" src="audio/better-day-186374.mp3" autoplay controls></audio>
+        <div class="bottom">
+            <div id="quote">
+                <span></span><br>
+                <span></span>
+            </div>
+            <div id="music">
+                <div id="music-name"></div>
+                <audio id="music-play" src="audio/better-day-186374.mp3" autoplay controls></audio>
+            </div>
         </div>
     
         <script src="js/greetings.js"></script>

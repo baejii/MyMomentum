@@ -12,7 +12,7 @@ const quotes = [
         author: "Abraham Lincoln",
     },
     {
-        quote: "The only thing worse than starting something and failing … is not starting something.",
+        quote: "The only thing worse than starting something and failing is not starting something.",
         author: "Seth Godin",
     },
     {
