@@ -11,7 +11,7 @@ function onGeoOk(position) {
         const weather = document.querySelector("#weather span:first-child");
         const city = document.querySelector("#weather span:last-child");
         city.innerText = data.name;
-        weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
+        weather.innerText = `${data.weather[0].main} ${data.main.temp}ºC`;
     }); // fetch는 promise,, 시간이 좀 걸린 뒤 일어나기 때문에 서버의 응답을 기다려야 함(then 사용 이유)
 } // 성공 함수는 GeolocationPosition object 하나 입력 받음 -> user의 위치를 얻음
 function onGeoError() {
